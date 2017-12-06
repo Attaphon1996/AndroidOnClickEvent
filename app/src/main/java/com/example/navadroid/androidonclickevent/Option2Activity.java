@@ -1,6 +1,7 @@
 package com.example.navadroid.androidonclickevent;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,6 @@ public class Option2Activity extends AppCompatActivity {
         etInput = (EditText) findViewById(R.id.et_input_2);
         tvOutput = (TextView) findViewById(R.id.tv_body_2);
     }
-
     // To set onClickListener to "each" view
     // You don't have to bind any function to "android:onClick" in layout XML file.
     // However, this will cause adding too many instructions to activity's "onCreate" method.
@@ -39,6 +39,22 @@ public class Option2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 greet();
                 hideKeyboardInput(v);
+            }
+        });
+        findViewById(R.id.back_btn_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent(Option2Activity.this,Option1Activity.class);
+                startActivity(back);
+                finish();
+            }
+        });
+        findViewById(R.id.next_btn_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(Option2Activity.this,Option3Activity.class);
+                startActivity(next);
+                finish();
             }
         });
     }

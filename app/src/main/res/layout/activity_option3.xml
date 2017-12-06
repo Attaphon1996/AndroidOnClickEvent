@@ -32,7 +32,26 @@
         android:layout_height="@dimen/touch_target_size"
         android:text="@string/process"
         android:layout_marginBottom="@dimen/small_spacing" />
-
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/back_btn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_target_size"
+            android:text="@string/BackBtnText"
+            android:layout_marginBottom="@dimen/small_spacing" />
+        <Button
+            android:id="@+id/next_btn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_target_size"
+            android:text="@string/NextBtnText"
+            android:layout_marginBottom="@dimen/small_spacing" />
+    </LinearLayout>
     <TextView
         android:id="@+id/tv_body_3"
         android:layout_width="match_parent"
